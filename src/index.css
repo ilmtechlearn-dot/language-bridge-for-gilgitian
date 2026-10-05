@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --primary: #0F4C81;
+    --secondary: #0E9F8D;
+    --accent: #F59E0B;
+    --bg-main: #F8FAFC;
+    --text-slate: #1E293B;
+  }
+
+  html {
+    background-color: #F8FAFC;
+    color: #1E293B;
+  }
+
+  html.dark {
+    background-color: #020617;
+    color: #F8FAFC;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #F8FAFC;
+    color: #1E293B;
+    min-height: 100vh;
+  }
+
+  .dark body {
+    background-color: #020617;
+    color: #F8FAFC;
+  }
+
+  /* Form controls color resilience */
+  input, select, textarea {
+    color: #0F172A;
+  }
+
+  .dark input, .dark select, .dark textarea {
+    color: #F8FAFC;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #94A3B8;
+  }
+
+  .dark input::placeholder, .dark textarea::placeholder {
+    color: #64748B;
+  }
+
+  ::selection {
+    background-color: #0F4C81;
+    color: #FFFFFF;
+  }
+
+  .font-urdu {
+    font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif;
+    line-height: 2.2;
+    direction: rtl;
+  }
+
+  /* Accessibility large text mode */
+  .text-lg-mode {
+    font-size: 112%;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

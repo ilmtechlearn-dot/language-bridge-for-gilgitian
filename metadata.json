@@ -1,0 +1,6 @@
+{
+  "name": "Gilgit Language Bridge",
+  "description": "Verified regional translation and phrase guide bridging Urdu, English, Shina, Balti, and Burushaski across Gilgit-Baltistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
